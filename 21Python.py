@@ -40,27 +40,34 @@ def valor_aces(mano):
             return valor_mano(mano)
 
 def verificar_mano(mano):
-        if hay_aces(mano) and valor_mano(mano) <= 21:
+        if  valor_mano(mano) <= 21:
             return True
         else:
-            print "Perdio ome"
+            
             return False
 
 
 def jugar(mazo, casa, jugador):
-    print str(casa[1:])+"[(*, *)]"
-    print jugador
-    print "--------------------------------------------"
-    print valor_aces(casa)
-    print valor_aces(jugador)
-    print "--------------------------------------------"
+  
 
     if (jugador==[] and casa==[]):
 
         return jugar(mazo[4:], casa + mazo[:2], jugador + mazo[2:4])
 
+    print str(casa[1:])+"[(*, *)]"
+    print jugador
+    print "--------------------------------------------"
 
-    if (input( "Desea otra carta?:  si = 1/ no = 0:   ") == 1):
+    
+    if verificar_mano(jugador) == False:
+        print "Perdio ome"
+        return exit
+
+    if verificar_mano(casa) == False:
+        print "Ganaste ome"
+        return exit
+
+    if (input( "Desea otra carta?:  s = 1/ no = 0:   ") == 1):
         if mazo != []:
             if jugador == []:
                 return jugar(mazo[4:],casa, jugador + mazo[2:4])
