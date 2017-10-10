@@ -81,5 +81,4 @@ def jugar(mazo, casa, jugador):
                 return jugar(mazo[2:], casa + [mazo[0]], jugador)
 
 
-
 jugar(generar_mazo(), [], [])
