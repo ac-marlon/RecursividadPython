@@ -9,9 +9,3 @@
 4. Pierde el menor de los dos acumulados o quien se pase de 21.
 
 ## Script para convertir números en base 10 a base 2
-
-**Integrantes:**
-
-- Marlon Arias Cárdenas (20151020111)
-- Daniel Mesa (20141020056)
-- Daniel Saenz (20141020060)
